@@ -7,6 +7,7 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import ContainerStyle from "./components/StyleAsPropsContainer";
 
 function App() {
   const personName = {
@@ -44,6 +45,7 @@ function App() {
           console.log({ name: e.target.name });
         }}
       />
+      <ContainerStyle styles={{ padding: "10px", border: "2px dashed red" }} />
     </div>
   );
 }
