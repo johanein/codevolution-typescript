@@ -7,6 +7,7 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import LoggedIn from "./components/State/LoggedIn";
+import Counter from "./components/State/UseReducerCounter";
 import Status from "./components/Status";
 import ContainerStyle from "./components/StyleAsPropsContainer";
 
@@ -48,6 +49,7 @@ function App() {
       />
       <ContainerStyle styles={{ padding: "10px", border: "2px dashed red" }} />
       <LoggedIn />
+      <Counter />
     </div>
   );
 }
