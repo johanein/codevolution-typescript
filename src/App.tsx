@@ -1,4 +1,6 @@
 import "./App.css";
+import Box from "./components/Context/Box";
+import ThemeContextProvider from "./components/Context/ThemeContext";
 import Greet from "./components/Greet";
 import Button from "./components/HandleButtonClick";
 import Input from "./components/HandleChangeInput";
@@ -50,6 +52,9 @@ function App() {
       <ContainerStyle styles={{ padding: "10px", border: "2px dashed red" }} />
       <LoggedIn />
       <Counter />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
     </div>
   );
 }
