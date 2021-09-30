@@ -1,19 +1,14 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../FutureValueUserContext";
 
-type AuthUser = {
-  name: string;
-  email: string;
-};
-
-const FutureValueUser = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+const User = () => {
+  const { setUser, user } = useContext(UserContext) || {};
   const handleLogin = () => {
-    setUser({ name: "Albert", email: "johanein@gmail.com" });
+    setUser({ name: "contextUser", email: "contextUser@gmail.com" });
   };
   const handleLogout = () => {
-    setUser(null);
+    if (setUser) setUser(null);
   };
-
   return (
     <div>
       <button onClick={handleLogin}>Login</button>
@@ -24,4 +19,4 @@ const FutureValueUser = () => {
   );
 };
 
-export default FutureValueUser;
+export default User;

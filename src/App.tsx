@@ -1,6 +1,8 @@
 import "./App.css";
 import Box from "./components/Context/Box";
+import FutureValueUserContext from "./components/Context/FutureValueUserContext";
 import ThemeContextProvider from "./components/Context/ThemeContext";
+import User from "./components/Context/User";
 import Greet from "./components/Greet";
 import Button from "./components/HandleButtonClick";
 import Input from "./components/HandleChangeInput";
@@ -55,6 +57,9 @@ function App() {
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
+      <FutureValueUserContext>
+        <User />
+      </FutureValueUserContext>
     </div>
   );
 }
