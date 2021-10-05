@@ -10,6 +10,8 @@ import Heading from "./components/Heading";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
+import DomRef from "./components/Ref/DomRef";
+import MutableRef from "./components/Ref/MutableRef";
 import LoggedIn from "./components/State/LoggedIn";
 import Counter from "./components/State/UseReducerCounter";
 import Status from "./components/Status";
@@ -60,6 +62,8 @@ function App() {
       <FutureValueUserContext>
         <User />
       </FutureValueUserContext>
+      <DomRef />
+      <MutableRef />
     </div>
   );
 }
