@@ -16,6 +16,13 @@ import LoggedIn from "./components/State/LoggedIn";
 import Counter from "./components/State/UseReducerCounter";
 import Status from "./components/Status";
 import ContainerStyle from "./components/StyleAsPropsContainer";
+import Private from "./components/Class/PassingComponentsAsProps/Private";
+import Profile from "./components/Class/PassingComponentsAsProps/Profile";
+import List from "./components/Class/GenericProps/List";
+import RandomNumber from "./components/Class/Restrictions/RandomNumbers.tsx";
+import Toast from "./components/Class/TemplateLiterals/Toast";
+import CustomButtons from "./components/Class/WrappingHtml/CustomButton";
+import CustomInput from "./components/Class/WrappingHtml/CustomInput";
 
 function App() {
   const personName = {
@@ -24,10 +31,12 @@ function App() {
   };
   const nameList = [
     {
+      id: 1,
       first: "Bruce",
       last: "Wayne",
     },
     {
+      id: 2,
       first: "Clark",
       last: "Kent",
     },
@@ -64,6 +73,19 @@ function App() {
       </FutureValueUserContext>
       <DomRef />
       <MutableRef />
+      <Private isLoggedIn Component={Profile} />
+      {/* <List
+        items={["Superman", "Batman", "Aquaman", "Wondewoman", "Flash"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List items={[1, 2, 3, 4]} onClick={(item) => console.log(item)} /> */}
+      <List items={nameList} onClick={(item) => console.log(item)} />
+      <RandomNumber isPositive value={10} />
+      <Toast position="center" />
+      <CustomButtons variant="primary" onClick={() => {}}>
+        Customised label
+      </CustomButtons>
+      <CustomInput onClick={() => {}} />
     </div>
   );
 }
