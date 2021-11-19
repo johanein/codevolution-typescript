@@ -2,7 +2,7 @@ import { PersonProps } from "../person.types";
 
 const Person = (props: PersonProps) => {
   return (
-    <li>
+    <li key={props.name.id}>
       {props.name.first} {props.name.last}
     </li>
   );

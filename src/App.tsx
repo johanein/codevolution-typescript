@@ -23,9 +23,11 @@ import RandomNumber from "./components/Class/Restrictions/RandomNumbers.tsx";
 import Toast from "./components/Class/TemplateLiterals/Toast";
 import CustomButtons from "./components/Class/WrappingHtml/CustomButton";
 import CustomInput from "./components/Class/WrappingHtml/CustomInput";
+import Text from "./components/Class/Polymorphic/Text";
 
 function App() {
   const personName = {
+    id: 1,
     first: "Bruce",
     last: "Wayne",
   };
@@ -86,6 +88,15 @@ function App() {
         Customised label
       </CustomButtons>
       <CustomInput onClick={() => {}} />
+      <Text as="h1" size="lg">
+        Heading
+      </Text>
+      <Text as="p" size="md">
+        Paragraph
+      </Text>
+      <Text as="label" htmlFor="someId" size="sm" color="secondary">
+        Label
+      </Text>
     </div>
   );
 }
